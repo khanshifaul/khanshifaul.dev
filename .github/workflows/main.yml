@@ -1,0 +1,14 @@
+name: Build Nuxt
+on: [push]
+jobs:
+  build_nuxt:
+    runs-on: ubuntu-latest
+    name: Build Nuxt
+    steps:
+    - uses: actions/checkout@v3
+    - id: Build-Nuxt
+      uses: khanshifaul/NuxtPagesAction@0.0.2
+      with:
+        username: 'khanshifaul'
+        reponame: 'khanshifaul.dev'
+        token: ${{ secrets.GITHUB_TOKEN }} # Leave this line unchanged

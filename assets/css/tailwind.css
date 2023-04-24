@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .dark-theme {
+        --primary: #6610f2;
+        --bg-primary: #2a213a;
+        --bg-secondary: #636363;
+        --text-primary: #f2f2f2;
+        --text-secondary: #333;
+    }
+
+    .light-theme {
+        --primary: #6610f2;
+        --bg-primary: #f2f2f2;
+        --bg-secondary: #6610f2;
+        --text-primary: #333;
+        --text-secondary: #f2f2f2;
+    }
+
+    .text-shadow {
+        text-shadow: #ffffff1f -2px 0;
+    }
+
+    .clip-proj-left {
+        -webkit-clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+    }
+
+    .clip-proj-right {
+        -webkit-clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
+        clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+
+@font-face {
+    font-family: "Acme";
+    src: url("/fonts/acme/acme.woff");
+}
+
+@font-face {
+    font-family: "Bacode";
+    src: url("/fonts/bacode/bacode.woff2");
+}
+
+@font-face {
+    font-family: "Broadway-bt";
+    src: url("/fonts/broadway-bt/broadway-bt.woff2");
+}
+
+@font-face {
+    font-family: "DancingScript";
+    src: url("/fonts/dancing-script/DancingScript.woff");
+}
+
+@font-face {
+    font-family: "Greenhouse-gas";
+    src: url("/fonts/greenhouse-gas/greenhouse-gas.woff2");
+}
+
+@font-face {
+    font-family: "Impact";
+    src: url("/fonts/Impact/impact.woff");
+}
+
+@font-face {
+    font-family: "Quick-starter";
+    src: url("/fonts/quick-starter/quick-starter.woff2");
+}
+
+@font-face {
+    font-family: "RubikMicrobe";
+    src: url("/fonts/RubikMicrobe-Regular.ttf");
+}
