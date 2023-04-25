@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
     app: {
         rootTag: "div",
-        baseURL: "/khanshifaul.dev/",
+        baseURL: "/khanshifaul.dev",
     },
     modules: [
         '@nuxtjs/tailwindcss',
