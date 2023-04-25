@@ -7,7 +7,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - id: Build-Nuxt
-      uses: khanshifaul/NuxtPagesAction@0.0.2
+      uses: khanshifaul/NuxtPagesAction@0.0.3
       with:
         username: 'khanshifaul'
         reponame: 'khanshifaul.dev'
