@@ -1,9 +1,7 @@
 <template>
     <section class="dark:bg-[#333] dark:text-lime-200 px-8 py-4">
         <div class="container mx-auto space-y-4">
-            <span
-                class="font-Quick-starter uppercase text-2xl bg-clip-text text-transparent bg-gradient-to-r to-blue-700 via-orange-500 from-red-700">
-                Khan Shifaul</span>
+            <Logo />
             <div class="grid grid-flow-row md:grid-cols-3 gap-4">
                 <div>
                     <div class="footer-contact">
@@ -57,8 +55,8 @@
                                 v-if="$colorMode.value == 'light'" />
                             <Icon icon="line-md:sunny-filled-loop-to-moon-filled-transition"
                                 v-if="$colorMode.value == 'dark'" />
-                            </button>
-                            <p class="text-slate-300 dark:text-slate-500 capitalize">{{ $colorMode.preference }}</p>
+                        </button>
+                        <p class="text-slate-300 dark:text-slate-500 capitalize">{{ $colorMode.preference }}</p>
                     </div>
                 </div>
             </div>

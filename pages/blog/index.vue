@@ -1,9 +1,9 @@
 <template>
     <BlogNavigation />
     <main>
-        <BlogHero />
-        <BlogPostCards />
+        <BlogHome />
     </main>
+    <BlogFooter />
 </template>
 
 <script setup>

@@ -28,12 +28,14 @@ function toggleMobileNav() {
                                 class="px-2 border-b-2 border-transparent hover:border-primary">About</NuxtLink>
                             <NuxtLink :to="{ path: '/', hash: '#work' }"
                                 class="px-2 border-b-2 border-transparent hover:border-primary">Work</NuxtLink>
+                            <NuxtLink :to="{ path: '/', hash: '#service' }"
+                                class="px-2 border-b-2 border-transparent hover:border-primary">Services</NuxtLink>
                             <NuxtLink :to="{ path: '/', hash: '#contact' }"
                                 class="px-2 border-b-2 border-transparent hover:border-primary">Contact</NuxtLink>
                             <NuxtLink to="/blog" class="px-2 border-b-2 border-transparent hover:border-primary">
                                 Blog</NuxtLink>
                             <NuxtLink to="https://cutt.ly/khanshifaul" type="button"
-                                class="px-2 border-2 font-bold rounded border-black dark:border-white hover:border-primary w-fit">
+                                class="px-2 border font-bold rounded border-black dark:border-white hover:border-primary w-fit">
                                 Hire me</NuxtLink>
                         </div>
                     </nav>

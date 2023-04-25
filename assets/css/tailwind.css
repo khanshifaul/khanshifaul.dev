@@ -2,23 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+
+    input[type] {
+        @apply bg-blue-200 w-full;
+    }
+
+    textarea {
+        @apply bg-blue-200 w-full;
+    }
+}
+
 @layer components {
-    .dark-theme {
-        --primary: #6610f2;
-        --bg-primary: #2a213a;
-        --bg-secondary: #636363;
-        --text-primary: #f2f2f2;
-        --text-secondary: #333;
-    }
-
-    .light-theme {
-        --primary: #6610f2;
-        --bg-primary: #f2f2f2;
-        --bg-secondary: #6610f2;
-        --text-primary: #333;
-        --text-secondary: #f2f2f2;
-    }
-
     .text-shadow {
         text-shadow: #ffffff1f -2px 0;
     }
@@ -31,6 +26,15 @@
     .clip-proj-right {
         -webkit-clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
         clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .scroll-btn {
+        @apply bg-stone-100 rounded-full;
     }
 }
 

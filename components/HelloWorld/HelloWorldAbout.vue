@@ -1,5 +1,5 @@
 <template>
-    <section id="about" class="dark:bg-[#121b35] dark:text-white p-8">
+    <section id="about" class="dark:text-white p-8">
         <div class="container mx-auto">
             <h3 class="border-b-2 dark:border-white font-Broadway-bt text-3xl">About Myself</h3>
             <div class="grid grid-flow-col justify-items-center align-baseline py-4">

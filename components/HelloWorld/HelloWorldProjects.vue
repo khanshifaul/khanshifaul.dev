@@ -11,7 +11,7 @@ console.log(projects)
 
 
 <template>
-  <section id="work" class="dark:bg-slate-700 dark:text-white p-8">
+  <section id="work" class="dark:text-white p-8">
     <div class="container mx-auto">
       <h3 class="text-3xl font-bold font-Broadway-bt pb-2 mb-4 border-b-2 dark:border-white">My Works</h3>
       <div class="grid gap-4">

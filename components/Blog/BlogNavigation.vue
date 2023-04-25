@@ -8,35 +8,38 @@ function toggleMobileNav() {
 </script>
 
 <template>
-    <header class="bg-light-background text-light p-3 sticky w-full top-0 z-50">
+    <header class="p-3 sticky w-full top-0 z-50 bg-white dark:bg-[#192f70] dark:text-white drop-shadow">
         <div class="container mx-auto space-y-6">
-            <div class="grid grid-flow-col justify-between items-center">
-                <NuxtLink to="/"
-                    class="router-link-active router-link-exact-active text-xl font-extrabold font-Quick-starter uppercase bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-red-700"
-                    aria-current="page">Khan Shifaul</NuxtLink>
-                <Icon class="text-3xl text-light-text md:hidden" icon="mdi:microsoft-xbox-controller-menu"
-                    @click="toggleMobileNav()" />
-                <nav id="Navbar" class="hidden md:flex justify-between text-xl">
-                    <div class="grid md:grid-flow-col md:space-x-1 lg:space-x-4">
-                        <NuxtLink :to="{ path: '/' }" class="px-2 border-b-2 border-transparent hover:border-primary">Home
-                        </NuxtLink>
-                        <NuxtLink :to="{ path: '/', hash: '#about' }"
-                            class="px-2 border-b-2 border-transparent hover:border-primary">About
-                        </NuxtLink>
-                        <NuxtLink :to="{ path: '/', hash: '#work' }"
-                            class="px-2 border-b-2 border-transparent hover:border-primary">
-                            Work</NuxtLink>
-                        <NuxtLink :to="{ path: '/', hash: '#contact' }"
-                            class="px-2 border-b-2 border-transparent hover:border-primary">
-                            Contact</NuxtLink>
-                        <NuxtLink to="/blog" class="px-2 border-b-2 border-transparent hover:border-primary">
-                            Blog</NuxtLink>
-                        <NuxtLink to="https://cutt.ly/khanshifaul"
-                            class="px-2 border-2 font-bold rounded border-light-text hover:border-primary hover:text-primary">
-                            Hire me</NuxtLink>
-                    </div>
-                </nav>
+            <div class="grid grid-flow-row md:grid-flow-col md:justify-between items-center">
+                <div class="grid grid-flow-col justify-between items-center">
+                    <logo />
+                    <Icon class="text-3xl dark:text-white md:hidden" icon="mdi:microsoft-xbox-controller-menu"
+                        @click="toggleMobileNav()" />
+                </div>
+                <transition enter-active-class="transition ease-out duration-300"
+                    enter-from-class="transform opacity-0 scale-95" enter-to-class="transform opacity-100 scale-100"
+                    leave-active-class="transition ease-in duration-75" leave-from-class="transform opacity-100 scale-100"
+                    leave-to-class="transform opacity-0 scale-95">
+                    <nav id="Navbar" class="hidden md:flex justify-between text-xl">
+                        <div class="grid md:grid-flow-col md:space-x-1 lg:space-x-4">
+                            <NuxtLink :to="{ path: '/' }" type="button"
+                                class="px-2 border font-bold rounded border-black dark:border-white hover:border-primary w-fit">
+                                About me</NuxtLink>
+                        </div>
+                    </nav>
+                </transition>
             </div>
         </div>
     </header>
 </template>
+
+<style scoped>
+a.nuxt-link-active {
+    border: 0;
+}
+
+a.nuxt-link-exact-active {
+    font-weight: bold;
+    border-bottom: 2px solid #6610f2;
+}
+</style>
