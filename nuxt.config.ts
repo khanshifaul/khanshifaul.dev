@@ -3,6 +3,7 @@ export default defineNuxtConfig({
     app: {
         rootTag: "div",
         baseURL: "/khanshifaul.dev",
+        buildAssetsDir: "/Assets/",
     },
     modules: [
         '@nuxtjs/tailwindcss',
@@ -26,10 +27,10 @@ export default defineNuxtConfig({
             // '/blog/**': { static: true },
             // '/blog/**': { cache: { /* cache options*/ } },
             '/assets/**': { headers: { 'cache-control': 's-maxage=0' } },
-            '/api/v1/**': { cors: true, headers: { 'access-control-allow-methods': 'GET' } },
+            // '/api/v1/**': { cors: true, headers: { 'access-control-allow-methods': 'GET' } },
             '/admin/dashboard': { redirect: '/admin' },
-            '/proxy/example': { proxy: 'https://example.com' },
-            '/proxy/**': { proxy: '/api/**' },
+            // '/proxy/example': { proxy: 'https://example.com' },
+            // '/proxy/**': { proxy: '/api/**' },
         }
     },
 });
