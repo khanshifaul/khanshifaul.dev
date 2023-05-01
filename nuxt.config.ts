@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
     app: {
         rootTag: "div",
-        baseURL: "/khanshifaul.dev",
+        baseURL: "/khanshifaul_dev",
         buildAssetsDir: "/Assets/",
     },
     modules: [
