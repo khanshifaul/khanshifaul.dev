@@ -5,6 +5,9 @@ export default defineNuxtConfig({
         baseURL: "/khanshifaul_dev",
         buildAssetsDir: "/Assets/",
     },
+    experimental: {
+        payloadExtraction: false,
+    },
     modules: [
         '@nuxtjs/tailwindcss',
         '@nuxtjs/color-mode',
