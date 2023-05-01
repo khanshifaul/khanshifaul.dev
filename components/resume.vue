@@ -1,5 +1,4 @@
 <template>
-    <main class="bg-light-background h-full">
         <div class="a4">
             <div class="grid grid-cols-[2fr_3fr] gap-3">
                 <div class="bg-[#003147] text-white px-5 border-r h-[297mm]">
@@ -166,26 +165,62 @@
                     <div class="py-2">
                         <h2 class="text-xl uppercase font-bold mb-1 border-b-2">Experience</h2>
                         <div class="py-2">
-                            <h5 class="text-sm font-normal">Nov 2018 - Present</h5>
-                            <h4 class="font-bold">Upwork</h4>
+                            <div class="flex items-center space-x-1">
+                                <Icon icon="mdi:calendar-range" />
+                                <h5 class="text-sm font-normal">Nov 2018 - Present</h5>
+                            </div>
+                            <div class="flex items-end space-x-2">
+                                <h4 class="font-bold">Upwork</h4>
+                                <div class="flex items-center space-x-1 text-xs font-normal">
+                                    <Icon icon="mdi:map-marker" />
+                                    <h3>Remote</h3>
+                                </div>
+                            </div>
                             <h4 class="font-semibold">Web Developer | Virtual Assistant <span
                                     class="text-sm font-normal">(Freelance)</span> </h4>
                         </div>
                         <div class="py-2">
-                            <h5 class="text-sm font-normal">Dec 2018 - Present</h5>
-                            <h4 class="font-bold">Fiverr</h4>
+                            <div class="flex items-center space-x-1">
+                                <Icon icon="mdi:calendar-range" />
+                                <h5 class="text-sm font-normal">Dec 2018 - Present</h5>
+                            </div>
+                            <div class="flex items-end space-x-2">
+                                <h4 class="font-bold">Fiverr</h4>
+                                <div class="flex items-center space-x-1 text-xs font-normal">
+                                    <Icon icon="mdi:map-marker" />
+                                    <h3>Remote</h3>
+                                </div>
+                            </div>
                             <h4 class="font-semibold">Web Developer | Virtual Assistant <span
                                     class="text-sm font-normal">(Freelance)</span> </h4>
                         </div>
                         <div class="py-2">
-                            <h5 class="text-sm font-normal">Jan 2022 - July 2022</h5>
-                            <h4 class="font-bold">Progress Education Family, Bogura</h4>
+                            <div class="flex items-center space-x-1">
+                                <Icon icon="mdi:calendar-range" />
+                                <h5 class="text-sm font-normal">Jan 2022 - July 2022</h5>
+                            </div>
+                            <div class="flex items-end space-x-2">
+                                <h4 class="font-bold">Progress Education Family</h4>
+                                <div class="flex items-center space-x-1 text-xs font-normal">
+                                    <Icon icon="mdi:map-marker" />
+                                    <h3>Jaleshwaritola, Bogura</h3>
+                                </div>
+                            </div>
                             <h4 class="font-semibold">Computer Operator <span class="text-sm font-normal">(Full-time)</span>
                             </h4>
                         </div>
                         <div class="py-2">
-                            <h5 class="text-sm font-normal">Feb 2017 - May 2021</h5>
-                            <h4 class="font-bold">Hasan Computer & Digital Studio, Sonatola</h4>
+                            <div class="flex items-center space-x-1">
+                                <Icon icon="mdi:calendar-range" />
+                                <h5 class="text-sm font-normal">Feb 2017 - May 2021</h5>
+                            </div>
+                            <div class="flex items-end space-x-2">
+                                <h4 class="font-bold">Hasan Computer & Digital Studio</h4>
+                                <div class="flex items-center space-x-1 text-xs font-normal">
+                                    <Icon icon="mdi:map-marker" />
+                                    <h3>Sonatola, Bogura</h3>
+                                </div>
+                            </div>
                             <h4 class="font-semibold">Computer Operator <span class="text-sm font-normal">(Full-time)</span>
                             </h4>
                         </div>
@@ -194,21 +229,30 @@
                     <div class="py-2">
                         <h2 class="text-xl uppercase font-bold mb-1 border-b-2">Education</h2>
                         <div class="py-2">
-                            <h5 class="text-sm">2023</h5>
+                            <div class="flex items-center space-x-1">
+                                <Icon icon="mdi:calendar-range" />
+                                <h5 class="text-sm">2023</h5>
+                            </div>
                             <h3 class="font-bold">Diploma in Computer Engineering</h3>
                             <h4 class="font-semibold">Computer Technology</h4>
                             <h4 class="font-normal">Bangladesh Technical Education Board</h4>
                             <h4 class="font-normal">GPA 3.75 out of 4.0</h4>
                         </div>
                         <div class="py-2">
-                            <h5 class="text-sm">2018</h5>
+                            <div class="flex items-center space-x-1">
+                                <Icon icon="mdi:calendar-range" />
+                                <h5 class="text-sm">2018</h5>
+                            </div>
                             <h3 class="font-bold">Higher Secondary School Certificate</h3>
                             <h4 class="font-semibold">Science Group</h4>
                             <h4 class="font-normal">Rajshahi Education Board</h4>
                             <h4 class="font-normal">Drop-out</h4>
                         </div>
                         <div class="py-2">
-                            <h5 class="text-sm">2015</h5>
+                            <div class="flex items-center space-x-1">
+                                <Icon icon="mdi:calendar-range" />
+                                <h5 class="text-sm">2015</h5>
+                            </div>
                             <h3 class="font-bold">Secondary School Certificate</h3>
                             <h4 class="font-semibold">Science Group</h4>
                             <h4 class="font-normal">Rajshahi Education Board</h4>
@@ -237,7 +281,6 @@
                 </div>
             </div>
         </div>
-    </main>
 </template>
 
 <script setup>
