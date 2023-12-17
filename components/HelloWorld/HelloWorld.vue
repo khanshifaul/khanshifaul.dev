@@ -1,3 +1,8 @@
+<script setup>
+import { Icon } from '@iconify/vue';
+const bgImage = "https://source.unsplash.com/random/?dark"
+</script>
+
 <template>
   <section class="bg-primary">
     <div class="bg-cover bg-center min-h-[80vh] p-8 justify-center hero"
@@ -37,11 +42,6 @@
     </div>
   </section>
 </template>
-
-<script setup>
-import { Icon } from '@iconify/vue';
-const bgImage = "https://source.unsplash.com/random/?dark"
-</script>
 
 <style scoped>
 .hero {

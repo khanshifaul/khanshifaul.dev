@@ -11,7 +11,8 @@ export default defineNuxtConfig({
     modules: [
         '@nuxtjs/tailwindcss',
         '@nuxtjs/color-mode',
-        '@nuxt/devtools'
+        '@nuxt/devtools',
+        '@sidebase/nuxt-pdf'
     ],
     tailwindcss: {
         cssPath: '@/assets/css/tailwind.css',

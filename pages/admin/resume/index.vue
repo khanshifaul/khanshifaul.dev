@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { Icon } from '@iconify/vue'
 </script>
 
@@ -16,10 +16,10 @@ import { Icon } from '@iconify/vue'
                 </div>
             </div>
             <div class="m-12 flex space-x-2 items-start">
-                <div class="border border-slate-400">
+                <div ref="pdfSection">
                     <resume class="p-1" />
                 </div>
-                <button>
+                <button @click="">
                     <Icon icon="mdi:download-circle-outline" width="24" height="24" />
                 </button>
             </div>

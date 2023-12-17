@@ -19,8 +19,8 @@
                     <span class="text-danger"></span>
                 </div>
                 <div class="form-floating py-1">
-                    <textarea id="floatingTextarea" class="form-textarea px-4 py-3 rounded bg-blue-200" aria-required="true"
-                        placeholder="Leave your message here" style="height: 350px"></textarea>
+                    <textarea id="floatingTextarea" class="form-textarea px-4 py-3 rounded bg-transparent" aria-required="true"
+                        placeholder="Leave your message here ..." style="height: 350px"></textarea>
                     <span class="text-danger"></span>
                 </div>
                 <div class="py-1 flex justify-end">

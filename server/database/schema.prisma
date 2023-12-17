@@ -6,18 +6,20 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
-  url      = env("DATABASE_URL")
+  provider     = "sqlite"
+  url          = env("DATABASE_URL")
+  relationMode = "prisma"
 }
 
 model User {
-  id        Int       @id @default(autoincrement())
-  loginType String    @default("email")
+  id        Int      @id @default(autoincrement())
+  loginType String   @default("email")
   password  String
-  email     String    @unique
+  email     String   @unique
   name      String
-  username  String    @unique
+  username  String   @unique
   session   Session?
+  role      String
 
   @@index([name])
 }
@@ -37,10 +39,10 @@ model Project {
   title       String
   description String
   thumbnail   String?
-  githuburl   String?    @default("https://github.com/khanshifaul/")
-  projecturl  String?    @default("https://khanshifaul.github.io/")
+  githuburl   String?   @default("https://github.com/khanshifaul/")
+  projecturl  String?   @default("https://khanshifaul.github.io/")
   Tags        Tag[]
-  featured    Boolean?   @default(false)
+  featured    Boolean?  @default(false)
   createdAt   DateTime  @default(now())
   updatedAt   DateTime  @updatedAt
   deletedAt   DateTime?

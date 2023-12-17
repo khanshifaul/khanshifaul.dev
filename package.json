@@ -15,6 +15,7 @@
     "@nuxt/devtools": "npm:@nuxt/devtools-edge@latest",
     "@nuxtjs/device": "^3.1.0",
     "@nuxtjs/tailwindcss": "^6.6.6",
+    "@sidebase/nuxt-pdf": "^0.1.1",
     "@types/node": "^18.16.0",
     "nuxt": "npm:nuxt3@latest",
     "nuxt-calendly": "^0.1.14",

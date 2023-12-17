@@ -66,6 +66,23 @@
             </li>
             <li class="mb-4 ">
                 <div class="flex items-center justify-between hover:bg-gray-700">
+                    <nuxt-link to="/admin/resume" class="flex items-center px-4 py-2">
+                        <Icon icon="mdi:briefcase" class="mr-2" />
+                        Resume
+                    </nuxt-link>
+                    <button type="button">
+                        <Icon @click="showServiceDrop = !showServiceDrop" icon="mdi:chevron-down" class="mr-2 text-2xl" />
+                    </button>
+                </div>
+                <div v-if="showServiceDrop" class="pl-6 hover:bg-gray-700">
+                    <nuxt-link to="/admin/resume/new" class="flex items-center font-thin px-4 py-2">
+                        <Icon icon="mdi:pencil-box" class="mr-2" />
+                        Create New Resume
+                    </nuxt-link>
+                </div>
+            </li>
+            <li class="mb-4 ">
+                <div class="flex items-center justify-between hover:bg-gray-700">
                     <nuxt-link to="/admin/invoices" class="flex items-center px-4 py-2">
                         <Icon icon="mdi:briefcase" class="mr-2" />
                         Invoices

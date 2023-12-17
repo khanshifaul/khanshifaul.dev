@@ -1,5 +1,4 @@
 import { IUser } from "~~/types/IUser"
-import bcrypt from 'bcrypt'
 import { doesUserExists } from "~~/server/services/userService"
 
 export default defineEventHandler(async (event) => {

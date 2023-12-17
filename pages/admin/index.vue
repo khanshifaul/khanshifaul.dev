@@ -44,6 +44,7 @@ import { Icon } from '@iconify/vue';
 
 definePageMeta({
     layout: "admin",
+    middleware: "auth"
 });
 const route = useRoute()
 

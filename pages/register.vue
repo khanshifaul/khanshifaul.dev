@@ -16,17 +16,12 @@ async function postRegisterForm() {
 </script>
 
 <template>
-    <div class="bg-white dark:bg-[#192f70] dark:text-white h-screen">
-        <div class="flex items-center justify-center px-4 sm:px-6 lg:px-8">
-            <div class="max-w-md w-full">
-                <div class="mt-10 text-center">
-                    <logo class="!text-3xl" />
-                </div>
-                <div>
-                    <h2 class="text-center text-3xl font-extrabold mt-5 text-gray-900 dark:text-white">
-                        Sign Up
-                    </h2>
-                </div>
+    <section class="bg-blue-200 dark:bg-[#192f70] min-h-[100vh]">
+        <div class="container mx-auto py-24">
+            <div class="flex items-center justify-around text-center">
+                <Logo class="!text-3xl" />
+            </div>
+            <div class="max-w-md mx-auto my-12 p-5 rounded shadow-lg bg-white dark:bg-slate-400">
                 <div v-if="response?.hasErrors && errors"
                     class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mt-3" role="alert">
                     <ul class="block sm:inline">
@@ -35,31 +30,31 @@ async function postRegisterForm() {
                         </li>
                     </ul>
                 </div>
-                <form v-on:submit.prevent class="mt-8 space-y-6" action="#" method="POST">
+                <form v-on:submit.prevent class="space-y-6" action="#" method="POST">
                     <input type="hidden" name="remember" value="true" />
-                    <div class="rounded-md shadow-sm -space-y-px mb-1">
+                    <div class="rounded shadow-sm mb-1">
                         <div>
                             <label for="name" class="sr-only">Name</label>
-                            <input v-model="name" id="name" name="name" required
-                                class="appearance-none dark:bg-slate-500 dark:text-white dark:placeholder-white rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                            <input type="text" v-model="name" id="name" name="name" required
+                                class="appearance-none rounded relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                                 :class="errors?.has('name') ? ' border-red-500' : ''" placeholder="Name" />
                         </div>
                     </div>
-                    <div class="rounded-md shadow-sm -space-y-px mb-1">
+                    <div class="rounded shadow-sm mb-1">
                         <div>
                             <label for="email-address" class="sr-only">Username</label>
                             <input type="email" v-model="username" id="username" name="username" required
-                                class="dark:bg-slate-500 dark:text-white dark:placeholder-white appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                                class="appearance-none rounded relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                                 :class="errors?.has('username') ? ' border-red-500' : ''" placeholder="Username" />
                         </div>
                     </div>
 
-                    <div class="rounded-md shadow-sm -space-y-px mb-1">
+                    <div class="rounded shadow-sm mb-1">
                         <div>
                             <label for="email-address" class="sr-only">Email address</label>
                             <input v-model="email" id="email-address" name="email" type="email" autocomplete="email"
                                 required
-                                class="dark:bg-slate-500 dark:text-white dark:placeholder-white appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                                class="appearance-none rounded relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                                 :class="errors?.has('email') ? ' border-red-500' : ''" placeholder="Email address" />
                         </div>
                     </div>
@@ -67,34 +62,30 @@ async function postRegisterForm() {
                         <label for="password" class="sr-only">Password</label>
                         <input v-model="password" id="password" name="password" type="password"
                             autocomplete="current-password" required
-                            class="dark:bg-slate-500 dark:text-white dark:placeholder-white appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                            class="appearance-none rounded relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                             :class="errors?.has('password') ? ' border-red-500' : ''" placeholder="Password" />
                     </div>
-
                     <div class="flex items-center justify-between">
-                        <div class="text-sm">
-                            <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">
-                                Forgot your password?
-                            </a>
-                        </div>
+                        <button @click.prevent="postRegisterForm"
+                            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                            <span class="flex items-center space-x-4">
+                                <!-- Heroicon name: solid/lock-closed -->
+                                <svg class="h-5 w-5 text-indigo-500 group-hover:text-indigo-400"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                    aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span> Register </span>
+                            </span>
+                        </button>
+                        <a href="#"
+                            class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800">Forgot
+                            Password?</a>
                     </div>
-
-                    <div></div>
                 </form>
-                <button @click.prevent="postRegisterForm"
-                    class="mt-5 group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                    <span class="absolute left-0 inset-y-0 flex items-center pl-3">
-                        <!-- Heroicon name: solid/lock-closed -->
-                        <svg class="h-5 w-5 text-indigo-500 group-hover:text-indigo-400" xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                            <path fill-rule="evenodd"
-                                d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
-                                clip-rule="evenodd" />
-                        </svg>
-                    </span>
-                    register
-                </button>
             </div>
         </div>
-    </div>
+    </section>
 </template>

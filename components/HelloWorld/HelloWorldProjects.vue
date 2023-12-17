@@ -5,7 +5,7 @@ const { data: project } = await useAsyncData('projects', () => {
   return $fetch(`/api/project/project`)
 })
 
-const projects = project.value?.projects
+const projects = project.value?.project
 console.log(projects)
 </script >
 
